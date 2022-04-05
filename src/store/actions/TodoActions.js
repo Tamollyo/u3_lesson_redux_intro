@@ -1,16 +1,31 @@
-import { ADD_TODO, REMOVE_TODO, NEW_TODO } from '../types'
+import {
+  ADD_TODO,
+  NEW_TODO,
+  REMOVE_TODO,
+  MARK_COMPLETE,
+  SORT_TODOS
+} from '../types'
 
 export const AddTodo = (todo) => ({
   type: ADD_TODO,
   payload: todo
 })
 
-export const removeTodo = (idx) => ({
-  type: REMOVE_TODO,
-  payload: idx
-})
-
 export const CreateNewTodo = (formValue) => ({
   type: NEW_TODO,
   payload: formValue
+})
+
+export const RemoveTodo = (index) => ({
+  type: REMOVE_TODO,
+  payload: index
+})
+
+export const MarkComplete = (index) => ({
+  type: MARK_COMPLETE,
+  payload: index
+})
+
+export const SortTodos = () => ({
+  type: SORT_TODOS
 })
